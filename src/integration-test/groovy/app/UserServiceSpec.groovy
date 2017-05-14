@@ -18,9 +18,9 @@ class UserServiceSpec extends Specification {
 
         when:
         sleep(500)
-        //User.withTransaction {
+        User.withTransaction {
             u = User.findByUsername('sherlock')
-        //}
+        }
 
         then:
         u
